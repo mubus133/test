@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   body{
+      background-color: blue;
+      /* max-height: 100vh; */
+   }
+   .container{
+      width: 180px;
+      margin: auto;
+      background-color: black;
+      margin-top: 10em;
+      box-shadow: 10px 10px 9px white;
+      padding: 15px;
+      border-radius: 10px;
+     
+   }
+
+   button, .mult, .min, .plus, .division{
+      border: none;
+      width: 40px;
+      height: 40px;
+      margin-bottom: 4px;
+      border-radius: 100%;
+      background-color: gray;
+      color: white;
+      cursor: pointer;
+      
+   }
+
+   .mult, .min, .plus, .division{
+      background-color: orange;
+      color: black;
+      font-size: bold;
+      font-weight: bold;
+      font-size: 15px;
+   }
+   
+   .text{
+      color: white;
+      text-align: end;
+      margin-right: 20px;
+      margin-top: 30px;
+      margin-bottom: 40px;
+      font-size: 20px;
+      font-weight: bold;
+      box-sizing: border-box;
+      overflow: hidden;
+      width: 100%;
+   }
+</style>
+<body>
+   <div class="container">
+      <div class="text"> 0</div>
+      <div class="all">
+         <p>
+            <button onclick="
+            calculation += '1';
+        text.innerHTML = `${calculation}`;
+        console.log(`${calculation}`);
+            ">
+            1
+            </button>
+            <button onclick="
+            calculation += '2';
+            text.innerHTML = `${calculation}`
+        console.log(`${calculation}`)">
+            2
+            </button>
+            <button onclick="
+            calculation += '3';
+        text.innerHTML = `${calculation}`;
+        console.log(`${calculation}`)">3</button>
+            <button onclick="
+            calculation += ' * ';
+        text.innerHTML = `${calculation}`;
+        console.log(`${calculation}`)" class="mult">x</button>
+         </p>
+         <p>
+            <button onclick="
+            calculation += '4';
+        text.innerHTML = `${calculation}`;
+        console.log(`${calculation}`)">4</button>
+            <button onclick="
+            calculation += '5';
+        text.innerHTML = `${calculation}`;
+        console.log(`${calculation}`)">5</button>
+            <button onclick="
+            calculation += '6';
+        text.innerHTML = `${calculation}`;
+        console.log(`${calculation}`)">6</button>
+            <button onclick="
+            calculation += ' - '
+        text.innerHTML = `${calculation}`;
+        console.log(`${calculation}`)" class="min">-</button>
+         </p>
+         <p>
+            <button onclick="
+            calculation += '7';
+        text.innerHTML = `${calculation}`;
+        console.log(`${calculation}`)">7</button>
+            <button onclick="
+            calculation += '8';
+        text.innerHTML = `${calculation}`;
+        console.log(`${calculation}`)">8</button>
+            <button onclick="
+            calculation += '9';
+        text.innerHTML = `${calculation}`;
+        console.log(`${calculation}`)">9</button>
+            <button onclick="
+            calculation += ' + ';
+        text.innerHTML = `${calculation}`;
+        console.log(`${calculation}`)" class="plus">+</button>
+         </p>
+         <p>
+            <button onclick="
+            calculation += '0';
+        text.innerHTML = `${calculation}`;
+        console.log(`${calculation}`)">0</button>
+            <button onclick="
+            calculation += '.';
+        text.innerHTML = `${calculation}`;
+        console.log(`${calculation}`)">.</button>
+            <button onclick="
+            calculation += ' / ';
+        text.innerHTML = `${calculation}`;
+        console.log(`${calculation}`)" class="division">/</button>
+            <button onclick="
+            calculation = eval(calculation);
+        text.innerHTML = `${calculation}`;
+        console.log(`${calculation}`)">=</button>
+         </p>
+     </div>
+   </div>
+
+     <script>
+        let calculation = ''
+        const text = document.querySelector('.text');
+        text.textContent = `${calculation}`;
+      //   eval(calculation) = `${ecalculation}`;
+
+      const button = document.querySelectorAll('button');
+
+      button.style.display = 'none'
+     </script>
+</body>
+</html>
